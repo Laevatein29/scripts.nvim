@@ -18,6 +18,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		"*.mjs",
 	},
 	command = function()
+		print("ESLint")
 		if has_eslint_config() then
 			vim.cmd(":EslintFixAll")
 		else
