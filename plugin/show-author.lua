@@ -8,11 +8,6 @@ local function has_eslint_config()
 	return false
 end
 
-if has_eslint_config() then
-	vim.cmd(":EslintFixAll")
-else
-	print("未找到 ESLint 配置文件")
-end
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = {
 		"*.vue",
@@ -22,7 +17,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		"*.tsx",
 		"*.mjs",
 	},
-	command = ":EslintFixAll",
+	command = function()
+		if has_eslint_config() then
+			vim.cmd(":EslintFixAll")
+		else
+			print("no eslint config file!")
+		end
+	end,
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
