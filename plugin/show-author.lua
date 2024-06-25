@@ -1,4 +1,3 @@
-local vim = require("vim")
 local function has_eslint_config()
 	-- 检查常见 ESLint 配置文件名
 	for _, config_file in ipairs({ ".eslintrc.js", ".eslintrc.json", ".eslintrc", ".eslintrc.yaml", ".eslintrc.yml" }) do
