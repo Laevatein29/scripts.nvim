@@ -1,7 +1,7 @@
-if vim.g.loaded_co_author then
+if vim.g.show_author then
 	return
 end
 
-vim.g.loaded_co_author = true
+vim.g.show_author = true
 
 require("show-author")
