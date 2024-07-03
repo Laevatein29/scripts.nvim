@@ -2,7 +2,6 @@
 
 vim.g.overwrite_eslint = true
 
-vim.api.nvim_create_user_command("test", 'lua require("show-author").list()', {})
 vim.api.nvim_create_user_command(
   "FixAll",                     --
   require "overwrite-eslint" (), -- Lua
