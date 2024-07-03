@@ -1,4 +1,5 @@
-local function FixAll()
+local overwrite = {}
+overwrite.fix = function()
   local eslint_exists = vim.fn.exists ":EslintFixAll"
   -- vim.notify("Hello from Lua!" .. eslint_exists, vim.log.levels.INFO)
   if eslint_exists > 0 then
@@ -8,4 +9,4 @@ local function FixAll()
     vim.notify("Eslint config is not found!", vim.log.levels.INFO)
   end
 end
-return FixAll
+return overwrite

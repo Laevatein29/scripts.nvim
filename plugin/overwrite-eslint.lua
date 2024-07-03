@@ -2,11 +2,7 @@
 
 vim.g.overwrite_eslint = true
 
-vim.api.nvim_create_user_command(
-  "FixAll",                     --
-  require "overwrite-eslint" (), -- Lua
-  { nargs = "?" }               --
-)
+vim.api.nvim_create_user_command("FixAll", 'lua require("overwrite-eslint").fix()', {})
 
 -- TODO: add eslint fix fun
 
