@@ -69,3 +69,5 @@ Show_author.list = function()
 		end)
 	end
 end
+
+return Show_author
