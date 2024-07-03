@@ -4,4 +4,4 @@ end
 
 vim.g.show_author = true
 
-require("show-author")
+vim.api.nvim_create_user_command("ShowAuthor", 'lua require("show-author").list()', {})
