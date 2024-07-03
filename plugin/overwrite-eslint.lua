@@ -1,4 +1,4 @@
-if vim.g.overwrite_eslint then return end
+-- if vim.g.overwrite_eslint then return end
 
 vim.g.overwrite_eslint = true
 
