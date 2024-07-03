@@ -3,9 +3,9 @@ if vim.g.overwrite_eslint then return end
 vim.g.overwrite_eslint = true
 
 vim.api.nvim_create_user_command(
-  "FixAll",                   --
-  require "overwrite-eslint", -- Lua
-  { nargs = "?" }             --
+  "FixAll",                     --
+  require "overwrite-eslint" (), -- Lua
+  { nargs = "?" }               --
 )
 
 -- TODO: add eslint fix fun
