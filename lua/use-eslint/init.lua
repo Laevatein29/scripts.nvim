@@ -2,7 +2,7 @@ local use_eslint = {}
 
 local function FixAll()
   -- callback = function() vim.b.autoformat = false end,
-  if vim.b.autoformat then return {} end
+  if vim.b.autoformat then vim.notify("Fixed By Default", vim.log.levels.INFO) end
   local eslint_exists = vim.fn.exists ":EslintFixAll"
   -- vim.notify("Hello from Lua!" .. eslint_exists, vim.log.levels.INFO)
   if eslint_exists > 0 then
