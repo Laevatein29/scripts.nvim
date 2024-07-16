@@ -66,6 +66,8 @@ Show_author.todo = function()
       comment_start, comment_end = "#", ""
     elseif filetype == "c" or filetype == "cpp" or filetype == "java" then
       comment_start, comment_end = "/*", "*/"
+    elseif filetype == "vue" then
+      comment_start, comment_end = "<!--", "-->"
     else
       comment_start, comment_end = "//", ""
     end
